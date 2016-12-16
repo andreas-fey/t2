@@ -34,6 +34,7 @@ import com.apiomat.nativemodule.*;
 import com.apiomat.nativemodule.t1.T1Class;
 
 import com.apiomat.nativemodule.basics.*;
+import com.apiomat.nativemodule.t1.*;
 import com.apiomat.nativemodule.AuthState;
 /**
 * Generated class for your T2Class data model
@@ -62,6 +63,7 @@ public class T2Class extends T1Class
     public static final String MODEL_NAME = "T2Class";
 
     /** class specific attributes */
+    private com.apiomat.nativemodule.t1.T1Class t1attr = null;
     /**
      * Protected constructor; to create a new instance, use the createObject() method
      */
@@ -84,6 +86,36 @@ public class T2Class extends T1Class
     public String getModelName( )
     {
         return MODEL_NAME;
+    }
+
+    public com.apiomat.nativemodule.t1.T1Class getT1attr()
+    { 
+        if(this.t1attr == null)
+        {
+            /* do this by reflection to be backward compartible */
+            try
+            {
+                Method m = AbstractClientDataModel.class.getMethod( "loadReference", String.class,  Class.class );
+                this.t1attr =  ( com.apiomat.nativemodule.t1.T1Class ) m.invoke( this, "t1attr", com.apiomat.nativemodule.t1.T1Class.class );
+            }
+            catch ( NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e )
+            {
+                 //silently ignored
+            }
+        }   
+        return this.t1attr;
+    }
+
+    public void postT1attr( final com.apiomat.nativemodule.t1.T1Class refData )
+    {
+        addReference( "t1attr", refData );
+        this.t1attr = refData;
+    }
+
+    public void removeT1attr( final com.apiomat.nativemodule.t1.T1Class refData )
+    {
+        removeReference( "t1attr", refData );
+        this.t1attr = null;
     }
 
 }

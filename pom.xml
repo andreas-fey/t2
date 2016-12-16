@@ -57,6 +57,13 @@
             <systemPath>${project.basedir}/lib/jersey-core-1.16.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>com.apiomat.nativemodule</groupId>
+            <artifactId>T1</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/T1.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>servlet-api</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
